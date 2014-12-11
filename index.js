@@ -11,6 +11,7 @@ app.get('/', function(req, res){
     url: req.query.uri
   };
   csvld.parse(options, function (json) {
+    res.set('Content-Type', 'application/ld+json');
     res.send(json);
   });
   
