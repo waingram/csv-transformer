@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "csvld",
+  "version": "0.1.0",
+  "main": "lib/csvld.js",
+  "description": "Transforms CSV to JSON-LD and RDF.",
+  "homepage": "https://github.com/waingram/csv-ld",
+  "bugs": "https://github.com/waingram/csvld/issues",
+  "author": {
+    "name": "Bill Ingram",
+    "email": "wingram2@illinois.edu",
+    "url": "http://bill-ingram.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waingram/csvld"
+  },
+  "license": "UofI-NCSA",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "csvld",
+    "csv",
+    " jsonld",
+    " json-ld",
+    " rdf",
+    " csvw"
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1",
+    "grunt-mocha-cli": "^1.9.0",
+    "jshint-stylish": "^0.2.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "csvld": "cli.js"
+  },
+  "preferGlobal": "true",
+  "dependencies": {
+    "babyparse": "^0.2.1",
+    "express": "^4.10.4",
+    "request": "^2.49.0"
+  }
+}
