@@ -37,7 +37,8 @@
     "jshint-stylish": "^0.2.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "start": "node index.js"
   },
   "bin": {
     "csvld": "cli.js"
