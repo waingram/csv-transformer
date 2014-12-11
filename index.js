@@ -5,6 +5,8 @@ var csvld = require('./lib/csvld.js');
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
+app.set('json spaces', 2);
+
 app.get('/', function(req, res){
   var options = {
     method: 'GET',
