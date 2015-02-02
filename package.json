@@ -20,12 +20,10 @@
     "lib"
   ],
   "keywords": [
-    "csvld",
     "csv",
-    " jsonld",
-    " json-ld",
-    " rdf",
-    " csvw"
+    "jsonld",
+    "rdf",
+    "csvw"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
@@ -45,7 +43,6 @@
   },
   "preferGlobal": "true",
   "dependencies": {
-    "babyparse": "^0.2.1",
     "express": "^4.10.4",
     "request": "^2.49.0"
   }
