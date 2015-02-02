@@ -2,7 +2,7 @@
 
 'use strict';
 
-var csvld = require('./lib/csvld.js');
+var csvld = require('./lib/csvs.js');
 
 var userArgs = process.argv;
 var uri = userArgs[2];

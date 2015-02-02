@@ -20,12 +20,6 @@ app.get('/', function (req, res) {
   request.get(req.query.uri)
     .pipe(parser)
     .pipe(res);
-  
-  // csvld.parse(options, function (json) {
-  //   // res.set('Content-Type', 'application/json');
-  //   // res.send(json);
-  //   res.json(json);
-  // });
 
 });
 

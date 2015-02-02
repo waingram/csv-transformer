@@ -1,23 +1,23 @@
-#  [![Build Status](https://secure.travis-ci.org/waingram/csvld.png?branch=master)](http://travis-ci.org/waingram/csvld)
+#  [![Build Status](https://secure.travis-ci.org/waingram/csvw.png?branch=master)](http://travis-ci.org/waingram/csvw)
 
-> Transforms CSV to JSON-LD and RDF.
+> Transforms CSV to JSON and RDF.
 
 
 ## Getting Started
 
-Install the module with: `npm install csvld`
+Install the module with: `npm install csvw`
 
 ```js
-var csvld = require('csvld');
-csvld.awesome(); // "awesome"
+var csvld = require('csvw');
+csvw.awesome(); // "awesome"
 ```
 
 Install with cli command
 
 ```sh
-$ npm install -g csvld
-$ csvld --help
-$ csvld --version
+$ npm install -g csvw
+$ csvw --help
+$ csvw --version
 ```
 
 
