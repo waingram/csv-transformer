@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "csvld",
+  "name": "csv-transformer",
   "version": "0.1.0",
   "main": "lib/csvw.js",
   "description": "Transforms CSV to JSON and RDF.",
-  "homepage": "https://github.com/waingram/csvw",
-  "bugs": "https://github.com/waingram/csvw/issues",
+  "homepage": "https://github.com/waingram/csv-transformer",
+  "bugs": "https://github.com/waingram/csv-transformer/issues",
   "author": {
     "name": "Bill Ingram",
     "email": "wingram2@illinois.edu",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/waingram/csvw"
+    "url": "https://github.com/waingram/csv-transformer"
   },
   "license": "UofI-NCSA",
   "files": [
@@ -21,7 +21,7 @@
   ],
   "keywords": [
     "csv",
-    "jsonld",
+    "json",
     "rdf",
     "csvw"
   ],

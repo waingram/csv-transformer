@@ -1,24 +1,30 @@
 var express = require('express'),
     app = express(),
     request = require('request'),
-    CSVW = require('./lib/csvw.js');
+    CSVTransformer = require('./lib/csv-transformer.js');
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.set('json spaces', 2);
 
-
-
 app.get('/', function (req, res) {
-  var parserOptions = { uri: req.query.uri };
-  
-  var parser = new CSVW(parserOptions);
+  var csv,
+      metadata,
+      options,
+      csvTransformer;
+
+  csv = req.query.uri;
+  options = {
+    csv: csv
+  };
+
+  csvTransformer = new CSVTransformer(options);
 
   res.setHeader('Content-Type', 'application/json');
-  
+
   request.get(req.query.uri)
-    .pipe(parser)
+    .pipe(csvTransformer)
     .pipe(res);
 
 });

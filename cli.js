@@ -2,10 +2,16 @@
 
 'use strict';
 
-var csvld = require('./lib/csvs.js');
+var CSVTransformer = require('./lib/csv-transformer.js'),
+    request = require('request');
 
-var userArgs = process.argv;
-var uri = userArgs[2];
+var userArgs,
+    uri,
+    options,
+    csvTransformer;
+    
+userArgs = process.argv;
+uri = userArgs[2];
 
 if (userArgs.indexOf('-h') !== -1 || userArgs.indexOf('--help') !== -1 || uri === undefined) {
   return console.log('cli help');
@@ -15,11 +21,12 @@ if (userArgs.indexOf('-v') !== -1 || userArgs.indexOf('--version') !== -1) {
   return console.log(require('./package').version);
 }
 
-var options = {
-  method: 'GET',
-  url: uri
+options = {
+  csv: uri
 };
 
-csvld.parse(options, function (json) {
-  console.log(json);
-});
+csvTransformer = new CSVTransformer(options);
+
+request.get(csv)
+  .pipe(csvTransformer)
+  .pipe(console.stdout);

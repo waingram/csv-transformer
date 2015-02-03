@@ -1,23 +1,23 @@
-#  [![Build Status](https://secure.travis-ci.org/waingram/csvw.png?branch=master)](http://travis-ci.org/waingram/csvw)
+#  [![Build Status](https://secure.travis-ci.org/waingram/csv-transformer.png?branch=master)](http://travis-ci.org/waingram/csv-transformer)
 
 > Transforms CSV to JSON and RDF.
 
 
 ## Getting Started
 
-Install the module with: `npm install csvw`
+Install the module with: `npm install csv-transformer`
 
 ```js
-var csvld = require('csvw');
-csvw.awesome(); // "awesome"
+var CSVTransformer = require('csv-transformer');
+var transformer = new CSVTransformer(options);
 ```
 
 Install with cli command
 
 ```sh
-$ npm install -g csvw
-$ csvw --help
-$ csvw --version
+$ npm install -g csv-transformer
+$ csv-transformer --help
+$ csv-transformer --version
 ```
 
 

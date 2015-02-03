@@ -3,14 +3,13 @@
 
 var 
   assert = require('assert'),
-  csvw  = require('../lib/csvw.js'),
+  csvw  = require('../lib/csv-transformer.js'),
   csvUrl = 'https://raw.githubusercontent.com/iherman/CSVPlus/gh-pages/tests/tree-ops/tree-ops.csv';
 
 describe('csvw node module', function() {
   it('must parse four (4) rows', function() {
     var options = {
-      method: 'GET',
-      url: csvUrl
+      csv: csvUrl
     };
     csvw.parse(options, function (json) {
       console.log(json);
