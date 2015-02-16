@@ -9,21 +9,14 @@ app.use(express.static(__dirname + '/public'));
 app.set('json spaces', 2);
 
 app.get('/', function (req, res) {
-  var csv,
+  var csv = req.query.uri,
       metadata,
-      options,
-      csvTransformer;
-
-  csv = req.query.uri;
-  options = {
-    csv: csv
-  };
-
-  csvTransformer = new CSVTransformer(options);
+      options = { csv: csv },
+      csvTransformer = new CSVTransformer(options);
 
   res.setHeader('Content-Type', 'application/json');
 
-  request.get(req.query.uri)
+  request.get(csv)
     .pipe(csvTransformer)
     .pipe(res);
 
