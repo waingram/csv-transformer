@@ -1,14 +1,13 @@
 {
-  "private": true,
   "name": "csv-transformer",
-  "version": "0.1.0",
-  "main": "lib/csvw.js",
-  "description": "Transforms CSV to JSON and RDF.",
+  "version": "0.0.0",
+  "main": "lib/csv-transformer.js",
+  "description": "Transform CSV to JSON and RDF",
   "homepage": "https://github.com/waingram/csv-transformer",
   "bugs": "https://github.com/waingram/csv-transformer/issues",
   "author": {
     "name": "Bill Ingram",
-    "email": "wingram2@illinois.edu",
+    "email": "bill@bill-ingram.com",
     "url": "http://bill-ingram.com"
   },
   "repository": {
@@ -20,10 +19,12 @@
     "lib"
   ],
   "keywords": [
+    "csv-transformer",
     "csv",
     "json",
     "rdf",
-    "csvw"
+    "csvw",
+    "w3c"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
@@ -35,15 +36,14 @@
     "jshint-stylish": "^0.2.0"
   },
   "scripts": {
-    "test": "grunt",
-    "start": "node index.js"
+    "test": "grunt"
   },
   "bin": {
-    "csvld": "cli.js"
+    "csv-transformer": "cli.js"
   },
   "preferGlobal": "true",
   "dependencies": {
-    "express": "^4.10.4",
-    "request": "^2.49.0"
+    "express": "^4.11.2",
+    "request": "^2.53.0"
   }
 }
