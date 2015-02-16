@@ -8,8 +8,8 @@
 Install the module with: `npm install csv-transformer`
 
 ```js
-var CSVTransformer = require('csv-transformer');
-var transformer = new CSVTransformer(options);
+var CSVTransformer = require('csv-transformer'),
+  csvTransformer = new CSVTransformer(options);
 ```
 
 Install with cli command
@@ -40,5 +40,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 
-Copyright (c) 2014 Bill Ingram  
+Copyright (c) 2015 Bill Ingram  
 Licensed under the UofI-NCSA license.
