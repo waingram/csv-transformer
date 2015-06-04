@@ -1,26 +1,9 @@
-#  [![Build Status](https://secure.travis-ci.org/waingram/csv-transformer.png?branch=master)](http://travis-ci.org/waingram/csv-transformer)
-
-> Transforms CSV to JSON and RDF.
+Transforms CSV to JSON in accordance with the specifications set by the W3C’s [CSV on the Web Working Group](http://www.w3.org/2013/csvw).
 
 
 ## Getting Started
 
-Install the module with: `npm install csv-transformer`
-
-```js
-var CSVTransformer = require('csv-transformer'),
-  csvTransformer = new CSVTransformer(options);
-```
-
-Install with cli command
-
-```sh
-$ npm install -g csv-transformer
-$ csv-transformer --help
-$ csv-transformer --version
-```
-
-
+_(Coming soon)_
 
 
 ## Documentation
@@ -30,13 +13,26 @@ _(Coming soon)_
 
 ## Examples
 
-_(Coming soon)_
+```js
+var request = require('request'),
+    csvTransformer = require('csv-transformer');
+
+var csv = 'http://example.com/test.csv',
+    metadata = 'http://example.com/metadata.json',
+    csvTransformer = new csvTransformer({
+      csv: csv,
+      metadata: metadata
+    });
+
+request.get(csv)
+  .pipe(csvTransformer)
+  .pipe(console.stdout);
+```
 
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com).
-
+*Contributions welcome*
 
 ## License
 
